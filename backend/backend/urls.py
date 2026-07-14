@@ -1,8 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include, re_path
-from django.views.static import serve
+from django.urls import path, include
 from rest_framework_simplejwt.views import (TokenObtainPairView,TokenRefreshView,)
 from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -10,11 +10,12 @@ urlpatterns = [
     path('api/', include('store.urls')),
     path('token/', TokenObtainPairView.as_view()),
     path('token/refresh/', TokenRefreshView.as_view()),
-    # Serve uploaded media files. In production the media directory is shipped
-    # with the app, so it is served directly by Django regardless of DEBUG.
-    re_path(
-        r'^media/(?P<path>.*)$',
-        serve,
-        {'document_root': settings.MEDIA_ROOT},
-    ),
 ]
+
+# In production media files are served by WhiteNoise (see backend/wsgi.py).
+# The development server serves them through Django instead.
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT,
+    )
