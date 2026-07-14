@@ -17,5 +17,5 @@ COPY backend/ ./backend/
 # Collect static files
 RUN cd backend && python manage.py collectstatic --noinput || true && cd ..
 
-# Run migrations and start server
-CMD sh -c "cd backend && python manage.py migrate && gunicorn backend.wsgi:application --bind 0.0.0.0:\$PORT"
+# Run migrations, seed demo data and start server
+CMD sh -c "cd backend && python manage.py migrate && python manage.py seed_data && gunicorn backend.wsgi:application --bind 0.0.0.0:\$PORT"

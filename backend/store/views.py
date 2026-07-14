@@ -11,7 +11,7 @@ from .serializers import CategorySerializer, ProductSerializer, CartSerializer
 @api_view(['GET'])
 def categories(request):
     categories = Category.objects.all()
-    serializer = CategorySerializer(categories, many=True)
+    serializer = CategorySerializer(categories, many=True, context={"request": request})
     return Response(serializer.data)
 
 

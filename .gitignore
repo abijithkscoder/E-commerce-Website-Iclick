@@ -22,6 +22,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Django collected static files (generated at build time)
+staticfiles/
+
 # Python
 __pycache__/
 *.py[cod]
