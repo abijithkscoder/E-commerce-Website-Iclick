@@ -1,0 +1,43 @@
+.secondary-navbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  background: #232f3e;
+  color: white;
+
+  padding: 0 20px;
+
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.secondary-navbar::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-item {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #febd69;
+}
+
+.nav-item:first-child {
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.nav-item:first-child:hover {
+  border-color: white;
+  background: transparent;
+  color: white;
+}

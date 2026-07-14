@@ -1,0 +1,517 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.cs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Hero ── */
+.cs-hero {
+  position: relative;
+  background: linear-gradient(135deg, #2bb89a 0%, #1a7a6e 30%, #0f4c6e 100%);
+  padding: 90px 24px 110px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.cs-hero-bg-icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cs-bg-icon {
+  position: absolute;
+  font-size: 36px;
+  opacity: 0.08;
+}
+
+.cs-bg-icon-1 { top: 15%; left: 5%; }
+.cs-bg-icon-2 { top: 60%; left: 3%; }
+.cs-bg-icon-3 { top: 20%; right: 6%; }
+.cs-bg-icon-4 { top: 65%; right: 4%; }
+.cs-bg-icon-5 { top: 10%; left: 45%; }
+.cs-bg-icon-6 { top: 70%; left: 50%; }
+
+.cs-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cs-hero h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 36px;
+}
+
+.cs-hero-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.cs-hero-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: #f5a623;
+  border-radius: 50% 50% 0 0 / 6px;
+}
+
+.cs-search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 6px 8px 6px 20px;
+  gap: 0;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cs-search-left,
+.cs-search-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.cs-search-divider {
+  width: 1px;
+  height: 24px;
+  background: #e5e7eb;
+  margin: 0 12px;
+}
+
+.cs-search-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.cs-search-bar input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #374151;
+  width: 100%;
+  background: transparent;
+}
+
+.cs-search-arrow {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.cs-find-btn {
+  background: #f5a623;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 11px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  margin-left: 8px;
+}
+
+.cs-find-btn:hover {
+  background: #e09510;
+}
+
+/* ── Services ── */
+.cs-services {
+  padding: 70px 24px 60px;
+  background: #fff;
+}
+
+.cs-services-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 32px;
+}
+
+.cs-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cs-service-card {
+  border: 0.5px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cs-service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.cs-service-card.featured {
+  background: #1a6b52;
+  border-color: #1a6b52;
+}
+
+.cs-service-card.featured h3,
+.cs-service-card.featured p {
+  color: #fff;
+}
+
+.cs-service-card.featured .cs-service-icon {
+  color: #fff;
+}
+
+.cs-service-icon {
+  color: #2bb89a;
+  margin-bottom: 16px;
+}
+
+.cs-service-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.cs-service-card p {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.65;
+}
+
+/* ── Why Choose Us ── */
+.cs-why {
+  padding: 80px 24px;
+  background: #f9fafb;
+}
+
+.cs-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cs-why-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2bb89a;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+.cs-why-text h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.cs-why-text p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.cs-why-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.cs-btn-primary {
+  background: #2bb89a;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cs-btn-primary:hover {
+  background: #1fa085;
+}
+
+.cs-btn-ghost {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+}
+
+.cs-play-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+}
+
+.cs-why-image-wrap {
+  position: relative;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-why-circle-orange {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #f5a623;
+  opacity: 0.85;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cs-why-circle-teal {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid #2bb89a;
+  opacity: 0.3;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cs-why-person {
+  position: absolute;
+  right: 60px;
+  bottom: 0;
+  width: 240px;
+  height: 320px;
+  background: linear-gradient(180deg, #e8f5f0 0%, #c8ece4 100%);
+  border-radius: 50% 50% 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+
+.cs-stat-badge {
+  position: absolute;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  z-index: 2;
+}
+
+.cs-stat-badge strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.cs-stat-badge span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.cs-stat-top {
+  top: 40px;
+  right: 0;
+}
+
+.cs-stat-bottom {
+  bottom: 40px;
+  left: 0;
+}
+
+/* ── How It Works ── */
+.cs-how {
+  padding: 80px 24px;
+  background: #f0f4f8;
+  text-align: center;
+}
+
+.cs-how-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2bb89a;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+
+.cs-how h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.4;
+  margin-bottom: 48px;
+}
+
+.cs-how-bubbles {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+.cs-how-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.6;
+}
+
+.cs-how-bubble-left {
+  width: 200px;
+  height: 200px;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cs-how-bubble-right {
+  width: 140px;
+  height: 140px;
+  right: 10%;
+  top: 20%;
+}
+
+.cs-how-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  z-index: 2;
+  position: relative;
+}
+
+.cs-how-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cs-how-card-header strong {
+  font-size: 15px;
+  color: #111827;
+}
+
+.cs-how-card-header span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.cs-how-card-time {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 18px;
+}
+
+.cs-how-confirm-btn {
+  background: #f5a623;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 9px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cs-how-avatar {
+  position: absolute;
+  right: 12%;
+  bottom: 10px;
+  width: 52px;
+  height: 52px;
+  background: #2bb89a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  z-index: 2;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .cs-hero h1 { font-size: 26px; }
+
+  .cs-search-bar {
+    flex-direction: column;
+    border-radius: 14px;
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .cs-search-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
+
+  .cs-find-btn {
+    width: 100%;
+    border-radius: 8px;
+    margin-left: 0;
+  }
+
+  .cs-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-why-image-wrap {
+    height: 260px;
+  }
+
+  .cs-how h2 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .cs-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
