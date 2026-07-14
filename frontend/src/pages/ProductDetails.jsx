@@ -5,7 +5,7 @@ import { BsCashCoin, BsCreditCard, BsBank } from "react-icons/bs";
 import api from "../services/api";
 import "./ProductDetails.css";
 
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = (import.meta.env.VITE_API_BASE_URL || "/api/").replace(/\/api\/?$/, "");
 
 function getImageUrl(path) {
   if (!path) return null;
