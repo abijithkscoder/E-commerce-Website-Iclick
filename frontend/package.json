@@ -14,7 +14,7 @@
     "formik": "^2.4.9",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "react-icon": "^1.0.0",
+    "react-icon": "^5.4.0",
     "react-lazy-load-image-component": "^1.6.3",
     "react-modal": "^3.16.3",
     "react-router-dom": "^7.18.0",

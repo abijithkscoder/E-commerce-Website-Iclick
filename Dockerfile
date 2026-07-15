@@ -7,15 +7,17 @@ RUN apt-get update && apt-get install -y \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install Python dependencies
-COPY backend/requirements.txt .
+# Copy backend directory
+COPY backend/ ./
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend code
-COPY backend/ ./backend/
-
 # Collect static files
-RUN cd backend && python manage.py collectstatic --noinput || true && cd ..
+RUN python manage.py collectstatic --noinput || true
+
+# Expose port
+EXPOSE 8000
 
 # Run migrations and start server
-CMD sh -c "cd backend && python manage.py migrate && gunicorn backend.wsgi:application --bind 0.0.0.0:\$PORT"
+CMD python manage.py migrate && gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT
